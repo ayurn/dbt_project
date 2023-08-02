@@ -1,0 +1,19 @@
+version: 2
+models:
+    - name: country_details
+      columns:
+        - name: COUNTRY
+          tests:
+            - unique
+            - not_null
+        - name: ABBREVIATION
+          test:
+            - unique
+            - not_null
+            - ABBREVIATION_test
+
+    - name: gdp
+      columns:
+        - name: GDP_Calc
+          tests:
+            - positive.sql         
